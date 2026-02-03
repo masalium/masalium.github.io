@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juan Andrés Herrera Vega — Software Engineer</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:920px;margin:40px auto;padding:0 16px;line-height:1.55}
+    .muted{color:#555}
+    .card{border:1px solid #e7e7e7;border-radius:14px;padding:16px;margin:14px 0}
+    a{color:inherit}
+    ul{padding-left:18px}
+    h1{margin-bottom:6px}
+    h2{margin-top:0}
+  </style>
+</head>
+<body>
+  <h1>Juan Andrés Herrera Vega</h1>
+  <p class="muted">Junior Software Engineer · Python / Java · Bash · Toronto</p>
+
+  <div class="card">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://github.com/masalium/REPO1">REPO1</a> — one-line impact statement</li>
+      <li><a href="https://github.com/masalium/REPO2">REPO2</a> — one-line impact statement</li>
+      <li><a href="https://github.com/masalium/REPO3">REPO3</a> — one-line impact statement</li>
+    </ul>
+    <p class="muted">More on <a href="https://github.com/masalium">GitHub</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2>Focus</h2>
+    <ul>
+      <li>Production-oriented software in Python</li>
+      <li>Java for JVM workflows</li>
+      <li>Bash + Linux automation</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:juanandresherreravegabsc@gmail.com">juanandresherreravegabsc@gmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/juan-andr%C3%A9s-herrera-vega-b3354b21a/">juan-andrés-herrera-vega</a></li>
+    </ul>
+  </div>
+</body>
+</html>
