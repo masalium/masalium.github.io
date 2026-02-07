@@ -25,23 +25,31 @@
     .split{display:grid;grid-template-columns:1fr;gap:12px}
     @media (min-width:820px){.split{grid-template-columns:1.35fr 0.65fr}}
     .repo li{margin:6px 0}
+  
+    .header{display:flex;align-items:center;gap:18px;margin-bottom:10px}
+    .profile-photo{width:120px;height:120px;object-fit:cover;border-radius:6px}
+    @media (max-width:520px){.profile-photo{width:96px;height:96px}}
+    
   </style>
 </head>
 <body>
   <header class="split">
     <div>
-      <h1>Juan Andrés Herrera Vega</h1>
-      <p class="muted tight">
-        Junior Software Developer · Data + backend · Toronto
-      </p>
+      <div class="header">
+        <img src="IMG_0351.jpg" alt="Portrait of Juan Andrés Herrera Vega" class="profile-photo" />
+        <div class="header-text">
+          <h1>Juan Andrés Herrera Vega</h1>
+          <p class="muted tight">Junior Software Developer · Systems Administration · Toronto</p>
+        </div>
+      </div>
       <p class="tight">
-        I build data workflows that keep working: ingestion, cleaning, validation, and repeatable reporting. My background is a
-        BSc with a strong math + physics track (biophysics focus), so I’m comfortable reasoning about messy real-world data,
-        edge cases, and “what must stay true” as requirements change.
-      </p>
-      <p class="tight">
-        In practice, that means shipping pipelines and tools where the output stays consistent month-to-month, and failures are diagnosable.
-        Most of this work is in Python + SQL, with Bash/PowerShell glue where it makes sense.
+        I work as a backend and infrastructure-oriented software developer, building systems and tools that sit close to the operating environment. My work spans application logic, data handling, automation, and system integration rather than being confined to a single domain like analytics or modeling.
+
+Across projects, I have built command-line tools, backend utilities, monitoring and automation scripts, and data-processing pipelines that are designed to execute repeatably as inputs, volume, and structure change. This includes handling ingestion, transformation, validation, and reporting where required, but also building the surrounding tooling—interfaces, scheduling, configuration, and diagnostics—that make these systems operable rather than ad-hoc.
+
+My academic background is in mathematics, statistics, and physics, with a specialization in biophysics. That training informs how I approach software engineering in general: reasoning from first principles, making assumptions explicit, identifying constraints and invariants, and thinking carefully about failure modes and edge cases as systems evolve.
+
+In practice, this means Python and SQL for backend and data-adjacent components, Bash and PowerShell for orchestration and system-level automation, and packaging work so tools can be deployed, reused, and inspected as concrete artifacts. I tend to work at the boundary between application code and the operating system, where correctness, observability, and predictable behavior over time are more important than surface-level complexity.
       </p>
       <div class="row" style="margin-top:10px">
         <span class="pill">Available immediately</span>
@@ -56,14 +64,9 @@
     </div>
 
     <aside class="card">
-      <h2>Quick facts</h2>
-      <ul class="muted">
-        <li>Education: BSc (Math/Stats + Physics; biophysics focus)</li>
-        <li>Client work: Python + SQL pipeline for recurring incident data; outputs used for official reporting</li>
-        <li>Data work: normalization/cleaning, schema drift handling, summary tables, repeatable reporting</li>
-        <li>Research: medical imaging tooling + automated processing modules (≈30% efficiency improvement)</li>
-        <li>Currently: LFCS in progress</li>
-      </ul>
+      <h2>Background</h2>
+      <p class="muted tight"><strong>Education:</strong> BSc — double major in Mathematics and Physics (specialization in Biophysics; Statistics focus).</p>
+      <p class="muted tight"><strong>Certification:</strong> LFCS (Linux Foundation Certified Sysadmin) — in progress.</p>
     </aside>
   </header>
 
@@ -73,41 +76,48 @@
 
       <div class="proj">
         <h3><a href="https://github.com/masalium/Client_Work_Event_Analysis_Pipeline">Client_Work_Event_Analysis_Pipeline</a></h3>
-        <p>
-          A recurring CSV → summaries pipeline built for client reporting. The main constraint: formats and event categories change,
-          but the workflow can’t. I implemented parsing, cleaning, and validation so monthly datasets normalize into consistent tables.
-        </p>
-        <p class="muted meta">
-          What it shows: production data cleaning + schema drift handling (Python), repeatable tables/queries (SQL), and script glue (Bash/PowerShell).
-        </p>
+        <p>A reporting pipeline for recurring CSV datasets where formats and event categories change over time, but the reporting output needs to remain comparable.</p>
+        <ul class="muted">
+          <li><strong>Input:</strong> raw CSV files with inconsistent structure</li>
+          <li><strong>Process:</strong> parsing, cleaning, validation, and normalization</li>
+          <li><strong>Output:</strong> consistent summary tables ready for Excel/Sheets reporting</li>
+        </ul>
+        <p class="muted meta"><strong>What it shows:</strong> backend workflow design under changing inputs (schema drift), with traceable outputs and repeatable runs.</p>
       </div>
 
       <div class="proj">
         <h3><a href="https://github.com/masalium/JournalDM">JournalDM</a></h3>
-        <p>
-          Private chat-style journaling web app with a daily prompt. Built end-to-end (UI → API → DB) with a focus on clean data flow
-          and predictable storage.
-        </p>
-        <p class="muted meta">What it shows: end-to-end application understanding and basic database-backed design.</p>
+        <p>A private journaling web app built end-to-end so entries move from a simple UI into an API and database with predictable storage.</p>
+        <ul class="muted">
+          <li><strong>Input:</strong> user text entries submitted through the web interface</li>
+          <li><strong>Process:</strong> API handling, validation, and database writes</li>
+          <li><strong>Output:</strong> a persistent journal history that can be queried and displayed</li>
+        </ul>
+        <p class="muted meta"><strong>What it shows:</strong> end-to-end application building (UI → API → DB) and basic database-backed backend design.</p>
       </div>
 
       <div class="proj">
         <h3><a href="https://github.com/masalium/InfraWatchLite">InfraWatchLite</a></h3>
-        <p>
-          Lightweight Linux health monitor that tracks utilization and produces clear logs/alerts when thresholds are exceeded.
-          Useful for keeping data jobs and small services stable without heavy tooling.
-        </p>
-        <p class="muted meta">What it shows: practical ops thinking and keeping systems observable.</p>
+        <p>A lightweight Linux health monitor that samples CPU, memory, and disk usage and writes timestamped logs with warnings when thresholds are crossed.</p>
+        <ul class="muted">
+          <li><strong>Input:</strong> system resource metrics from the host machine</li>
+          <li><strong>Process:</strong> periodic sampling, threshold checks, and logging</li>
+          <li><strong>Output:</strong> plain-text logs and warnings that show system health over time</li>
+        </ul>
+        <p class="muted meta"><strong>What it shows:</strong> operations-minded tooling: observability, diagnostics, and simple monitoring that fits small services and batch jobs.</p>
       </div>
 
       <div class="proj">
         <h3><a href="https://github.com/masalium/HelixNet">HelixNet</a></h3>
-        <p>
-          Protein secondary-structure classification pipeline with reproducible training/evaluation and straightforward metrics reporting.
-          F1 ≈ 0.89.
-        </p>
-        <p class="muted meta">What it shows: disciplined data handling and evaluation hygiene.</p>
+        <p>A machine-learning pipeline that classifies protein secondary structure (helix/sheet/coil) with reproducible training and evaluation outputs.</p>
+        <ul class="muted">
+          <li><strong>Input:</strong> labeled protein sequences</li>
+          <li><strong>Process:</strong> encoding, model training, and evaluation</li>
+          <li><strong>Output:</strong> trained model artifacts and metrics (F1 ≈ 0.89)</li>
+        </ul>
+        <p class="muted meta"><strong>What it shows:</strong> disciplined handling of datasets, evaluation outputs, and reproducible experiment-to-artifact packaging.</p>
       </div>
+
 
       <p class="muted" style="margin-top:12px">
         This page stays short on purpose. If you want details, the READMEs are the source of truth.
@@ -127,16 +137,14 @@
     </section>
 
     <section class="card">
-      <h2>What I’m good at</h2>
+      <h2>Focus areas</h2>
       <ul>
-        <li><strong>Data cleaning & normalization:</strong> consistent outputs from inconsistent inputs</li>
-        <li><strong>Database work:</strong> schema design basics, querying, and producing repeatable summary tables</li>
-        <li><strong>Large dataset workflow:</strong> batch processing, validation, and keeping jobs explainable</li>
-        <li><strong>Operations mindset:</strong> logs, alerts, and stability for long-running tasks</li>
+        <li><strong>Backend and infrastructure software:</strong> system-facing tools and services that run predictably over time.</li>
+        <li><strong>Data processing systems:</strong> ingestion, normalization, validation, transformation, and repeatable reporting.</li>
+        <li><strong>Database-backed workflows:</strong> schema design, querying, and generation of consistent summary tables.</li>
+        <li><strong>Automation and operations:</strong> scripting, scheduling, logging, and basic monitoring for long-running tasks.</li>
       </ul>
-      <p class="muted tight">
-        Daily tools (kept short): Python, SQL/MySQL, Bash, PowerShell, Git, Linux/Windows.
-      </p>
+      <p class="muted tight">Primary tools: Python, SQL/MySQL, Bash, PowerShell, Git, Linux and Windows.</p>
     </section>
 
     <section class="card">
