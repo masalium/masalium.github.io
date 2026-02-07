@@ -3,46 +3,142 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Juan Andrés Herrera Vega — Software Engineer</title>
+  <title>Juan Andrés Herrera Vega — Junior Software Developer</title>
+  <meta name="description" content="Junior Software Developer in Toronto. Production-oriented Python/Java. Data pipelines, automation, and Linux tooling." />
   <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:920px;margin:40px auto;padding:0 16px;line-height:1.55}
-    .muted{color:#555}
-    .card{border:1px solid #e7e7e7;border-radius:14px;padding:16px;margin:14px 0}
-    a{color:inherit}
-    ul{padding-left:18px}
-    h1{margin-bottom:6px}
-    h2{margin-top:0}
+    :root{--text:#111;--muted:#555;--border:#e8e8e8;--bg:#fff}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 16px;line-height:1.55;color:var(--text);background:var(--bg)}
+    a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+    a:hover{text-decoration-thickness:2px}
+    .muted{color:var(--muted)}
+    .card{border:1px solid var(--border);border-radius:14px;padding:16px;margin:14px 0}
+    .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .pill{border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:14px}
+    h1{margin:0 0 6px}
+    h2{margin:0 0 10px;font-size:18px}
+    h3{margin:0 0 6px;font-size:16px}
+    ul{padding-left:18px;margin:10px 0 0}
+    .proj{margin:10px 0 0}
+    .proj p{margin:0}
+    .proj .meta{margin-top:6px}
+    .tight{margin:6px 0 0}
+    .split{display:grid;grid-template-columns:1fr;gap:12px}
+    @media (min-width:820px){.split{grid-template-columns:1.35fr 0.65fr}}
+    .repo li{margin:6px 0}
   </style>
 </head>
 <body>
-  <h1>Juan Andrés Herrera Vega</h1>
-  <p class="muted">Junior Software Engineer · Python / Java · Bash · Toronto</p>
+  <header class="split">
+    <div>
+      <h1>Juan Andrés Herrera Vega</h1>
+      <p class="muted tight">
+        Junior Software Developer · Python/Java · Linux automation · Toronto
+      </p>
+      <p class="tight">
+        I build software that stays correct as inputs change: data pipelines, automation tools, and lightweight monitoring/utilities.
+        I’m strongest in backend/infrastructure-leaning work, with enough full-stack experience to understand systems end-to-end.
+      </p>
+      <div class="row" style="margin-top:10px">
+        <span class="pill">Available immediately</span>
+        <span class="pill">Backend / Data / Infrastructure</span>
+        <span class="pill">Python · Java · Bash · SQL</span>
+      </div>
+      <p class="muted tight" style="margin-top:10px">
+        Links:
+        <a href="https://github.com/masalium">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/juan-andr%C3%A9s-herrera-vega-b3354b21a/">LinkedIn</a> ·
+        <a href="mailto:juanandresherreravegabsc@gmail.com">Email</a>
+      </p>
+    </div>
 
-  <div class="card">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/masalium/REPO1">REPO1</a> — one-line impact statement</li>
-      <li><a href="https://github.com/masalium/REPO2">REPO2</a> — one-line impact statement</li>
-      <li><a href="https://github.com/masalium/REPO3">REPO3</a> — one-line impact statement</li>
-    </ul>
-    <p class="muted">More on <a href="https://github.com/masalium">GitHub</a>.</p>
-  </div>
+    <aside class="card">
+      <h2>At a glance</h2>
+      <ul class="muted">
+        <li>Client work: automated incident-data pipeline + recurring reporting outputs</li>
+        <li>Research: medical imaging tooling and automated processing modules</li>
+        <li>Focus: reliability, traceability, maintainable code</li>
+        <li>LFCS: in progress</li>
+      </ul>
+    </aside>
+  </header>
 
-  <div class="card">
-    <h2>Focus</h2>
-    <ul>
-      <li>Production-oriented software in Python</li>
-      <li>Java for JVM workflows</li>
-      <li>Bash + Linux automation</li>
-    </ul>
-  </div>
+  <main>
+    <section class="card">
+      <h2>Selected work</h2>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:juanandresherreravegabsc@gmail.com">juanandresherreravegabsc@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/juan-andr%C3%A9s-herrera-vega-b3354b21a/">juan-andrés-herrera-vega</a></li>
-    </ul>
-  </div>
+      <div class="proj">
+        <h3><a href="https://github.com/masalium/Client_Work_Event_Analysis_Pipeline">Client_Work_Event_Analysis_Pipeline</a></h3>
+        <p>
+          Automated pipeline that ingests recurring CSV incident data, adapts to new categories/schemas, and produces consistent
+          summary tables to support recurring reporting.
+        </p>
+        <p class="muted meta">Best for: evolving data inputs where outputs must stay consistent.</p>
+      </div>
+
+      <div class="proj">
+        <h3><a href="https://github.com/masalium/InfraWatchLite">InfraWatchLite</a></h3>
+        <p>
+          Lightweight Linux health monitor that tracks CPU/memory/GPU usage, logs overuse, and alerts when thresholds are exceeded.
+          Designed to be practical and low-overhead.
+        </p>
+        <p class="muted meta">Best for: personal servers and lab systems needing simple, actionable monitoring.</p>
+      </div>
+
+      <div class="proj">
+        <h3><a href="https://github.com/masalium/JournalDM">JournalDM</a></h3>
+        <p>
+          Private chat-style journaling app with a daily prompt. Full-stack build with a simple UX and authentication flow
+          (frontend + API + database).
+        </p>
+        <p class="muted meta">Best for: demonstrating end-to-end web app understanding and clean product thinking.</p>
+      </div>
+
+      <div class="proj">
+        <h3><a href="https://github.com/masalium/HelixNet">HelixNet</a></h3>
+        <p>
+          ML pipeline for predicting protein secondary structure from amino acid sequences, including encoding, training, and evaluation.
+          Built to be reproducible and easy to iterate on. F1 score ~0.89.
+        </p>
+        <p class="muted meta">Best for: showing disciplined experimentation and evaluation workflows.</p>
+      </div>
+
+      <p class="muted" style="margin-top:12px">
+        If you want depth, click into the repo and skim the README—this page is intentionally short.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>All repositories</h2>
+      <ul class="repo">
+        <li><a href="https://github.com/masalium/masalium.github.io">masalium.github.io</a> <span class="muted">— this website.</span></li>
+        <li><a href="https://github.com/masalium/Client_Work_Event_Analysis_Pipeline">Client_Work_Event_Analysis_Pipeline</a> <span class="muted">— recurring CSV → structured summaries.</span></li>
+        <li><a href="https://github.com/masalium/HelixNet">HelixNet</a> <span class="muted">— protein secondary-structure ML pipeline.</span></li>
+        <li><a href="https://github.com/masalium/JournalDM">JournalDM</a> <span class="muted">— private journaling web app.</span></li>
+        <li><a href="https://github.com/masalium/ShielD">ShielD</a> <span class="muted">— anomaly detection for logs/traffic.</span></li>
+        <li><a href="https://github.com/masalium/InfraWatchLite">InfraWatchLite</a> <span class="muted">— Linux system health monitoring.</span></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>What I optimize for</h2>
+      <ul>
+        <li><strong>Maintainability:</strong> readable code, clear interfaces, predictable behavior</li>
+        <li><strong>Traceability:</strong> validation/logging so failures are diagnosable and changes are trackable</li>
+        <li><strong>Reliability:</strong> systems that keep producing correct outputs as inputs evolve</li>
+      </ul>
+      <p class="muted tight">
+        Stack I use regularly: Python, Java, Bash, SQL/MySQL, Git, Linux.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:juanandresherreravegabsc@gmail.com">juanandresherreravegabsc@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/juan-andr%C3%A9s-herrera-vega-b3354b21a/">juan-andrés-herrera-vega</a></li>
+        <li>GitHub: <a href="https://github.com/masalium">github.com/masalium</a></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
