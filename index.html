@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Juan Andrés Herrera Vega — Junior Software Developer</title>
-  <meta name="description" content="Junior Software Developer in Toronto. Production-oriented Python/Java. Data pipelines, automation, and Linux tooling." />
+  <meta name="description" content="Junior Software Developer in Toronto. Data pipelines, dataset cleaning, and practical infrastructure tooling in Python/Java." />
   <style>
     :root{--text:#111;--muted:#555;--border:#e8e8e8;--bg:#fff}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 16px;line-height:1.55;color:var(--text);background:var(--bg)}
@@ -32,19 +32,23 @@
     <div>
       <h1>Juan Andrés Herrera Vega</h1>
       <p class="muted tight">
-        Junior Software Developer · Python/Java · Linux automation · Toronto
+        Junior Software Developer · Data + backend · Toronto
       </p>
       <p class="tight">
-        I build software that stays correct as inputs change: data pipelines, automation tools, and lightweight monitoring/utilities.
-        I’m strongest in backend/infrastructure-leaning work, with enough full-stack experience to understand systems end-to-end.
+        I build data workflows that keep working: ingestion, cleaning, validation, and repeatable reporting. My background is a
+        BSc with a strong math + physics track (biophysics focus), so I’m comfortable reasoning about messy real-world data,
+        edge cases, and “what must stay true” as requirements change.
+      </p>
+      <p class="tight">
+        In practice, that means shipping pipelines and tools where the output stays consistent month-to-month, and failures are diagnosable.
+        Most of this work is in Python + SQL, with Bash/PowerShell glue where it makes sense.
       </p>
       <div class="row" style="margin-top:10px">
         <span class="pill">Available immediately</span>
-        <span class="pill">Backend / Data / Infrastructure</span>
-        <span class="pill">Python · Java · Bash · SQL</span>
+        <span class="pill">Data pipelines · SQL · Python</span>
+        <span class="pill">Linux/Windows</span>
       </div>
       <p class="muted tight" style="margin-top:10px">
-        Links:
         <a href="https://github.com/masalium">GitHub</a> ·
         <a href="https://www.linkedin.com/in/juan-andr%C3%A9s-herrera-vega-b3354b21a/">LinkedIn</a> ·
         <a href="mailto:juanandresherreravegabsc@gmail.com">Email</a>
@@ -52,12 +56,13 @@
     </div>
 
     <aside class="card">
-      <h2>At a glance</h2>
+      <h2>Quick facts</h2>
       <ul class="muted">
-        <li>Client work: automated incident-data pipeline + recurring reporting outputs</li>
-        <li>Research: medical imaging tooling and automated processing modules</li>
-        <li>Focus: reliability, traceability, maintainable code</li>
-        <li>LFCS: in progress</li>
+        <li>Education: BSc (Math/Stats + Physics; biophysics focus)</li>
+        <li>Client work: Python + SQL pipeline for recurring incident data; outputs used for official reporting</li>
+        <li>Data work: normalization/cleaning, schema drift handling, summary tables, repeatable reporting</li>
+        <li>Research: medical imaging tooling + automated processing modules (≈30% efficiency improvement)</li>
+        <li>Currently: LFCS in progress</li>
       </ul>
     </aside>
   </header>
@@ -69,41 +74,43 @@
       <div class="proj">
         <h3><a href="https://github.com/masalium/Client_Work_Event_Analysis_Pipeline">Client_Work_Event_Analysis_Pipeline</a></h3>
         <p>
-          Automated pipeline that ingests recurring CSV incident data, adapts to new categories/schemas, and produces consistent
-          summary tables to support recurring reporting.
+          A recurring CSV → summaries pipeline built for client reporting. The main constraint: formats and event categories change,
+          but the workflow can’t. I implemented parsing, cleaning, and validation so monthly datasets normalize into consistent tables.
         </p>
-        <p class="muted meta">Best for: evolving data inputs where outputs must stay consistent.</p>
-      </div>
-
-      <div class="proj">
-        <h3><a href="https://github.com/masalium/InfraWatchLite">InfraWatchLite</a></h3>
-        <p>
-          Lightweight Linux health monitor that tracks CPU/memory/GPU usage, logs overuse, and alerts when thresholds are exceeded.
-          Designed to be practical and low-overhead.
+        <p class="muted meta">
+          What it shows: production data cleaning + schema drift handling (Python), repeatable tables/queries (SQL), and script glue (Bash/PowerShell).
         </p>
-        <p class="muted meta">Best for: personal servers and lab systems needing simple, actionable monitoring.</p>
       </div>
 
       <div class="proj">
         <h3><a href="https://github.com/masalium/JournalDM">JournalDM</a></h3>
         <p>
-          Private chat-style journaling app with a daily prompt. Full-stack build with a simple UX and authentication flow
-          (frontend + API + database).
+          Private chat-style journaling web app with a daily prompt. Built end-to-end (UI → API → DB) with a focus on clean data flow
+          and predictable storage.
         </p>
-        <p class="muted meta">Best for: demonstrating end-to-end web app understanding and clean product thinking.</p>
+        <p class="muted meta">What it shows: end-to-end application understanding and basic database-backed design.</p>
+      </div>
+
+      <div class="proj">
+        <h3><a href="https://github.com/masalium/InfraWatchLite">InfraWatchLite</a></h3>
+        <p>
+          Lightweight Linux health monitor that tracks utilization and produces clear logs/alerts when thresholds are exceeded.
+          Useful for keeping data jobs and small services stable without heavy tooling.
+        </p>
+        <p class="muted meta">What it shows: practical ops thinking and keeping systems observable.</p>
       </div>
 
       <div class="proj">
         <h3><a href="https://github.com/masalium/HelixNet">HelixNet</a></h3>
         <p>
-          ML pipeline for predicting protein secondary structure from amino acid sequences, including encoding, training, and evaluation.
-          Built to be reproducible and easy to iterate on. F1 score ~0.89.
+          Protein secondary-structure classification pipeline with reproducible training/evaluation and straightforward metrics reporting.
+          F1 ≈ 0.89.
         </p>
-        <p class="muted meta">Best for: showing disciplined experimentation and evaluation workflows.</p>
+        <p class="muted meta">What it shows: disciplined data handling and evaluation hygiene.</p>
       </div>
 
       <p class="muted" style="margin-top:12px">
-        If you want depth, click into the repo and skim the README—this page is intentionally short.
+        This page stays short on purpose. If you want details, the READMEs are the source of truth.
       </p>
     </section>
 
@@ -114,20 +121,21 @@
         <li><a href="https://github.com/masalium/Client_Work_Event_Analysis_Pipeline">Client_Work_Event_Analysis_Pipeline</a> <span class="muted">— recurring CSV → structured summaries.</span></li>
         <li><a href="https://github.com/masalium/HelixNet">HelixNet</a> <span class="muted">— protein secondary-structure ML pipeline.</span></li>
         <li><a href="https://github.com/masalium/JournalDM">JournalDM</a> <span class="muted">— private journaling web app.</span></li>
-        <li><a href="https://github.com/masalium/ShielD">ShielD</a> <span class="muted">— anomaly detection for logs/traffic.</span></li>
+        <li><a href="https://github.com/masalium/ShielD">ShielD</a> <span class="muted">— anomaly detection concept for logs/traffic.</span></li>
         <li><a href="https://github.com/masalium/InfraWatchLite">InfraWatchLite</a> <span class="muted">— Linux system health monitoring.</span></li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>What I optimize for</h2>
+      <h2>What I’m good at</h2>
       <ul>
-        <li><strong>Maintainability:</strong> readable code, clear interfaces, predictable behavior</li>
-        <li><strong>Traceability:</strong> validation/logging so failures are diagnosable and changes are trackable</li>
-        <li><strong>Reliability:</strong> systems that keep producing correct outputs as inputs evolve</li>
+        <li><strong>Data cleaning & normalization:</strong> consistent outputs from inconsistent inputs</li>
+        <li><strong>Database work:</strong> schema design basics, querying, and producing repeatable summary tables</li>
+        <li><strong>Large dataset workflow:</strong> batch processing, validation, and keeping jobs explainable</li>
+        <li><strong>Operations mindset:</strong> logs, alerts, and stability for long-running tasks</li>
       </ul>
       <p class="muted tight">
-        Stack I use regularly: Python, Java, Bash, SQL/MySQL, Git, Linux.
+        Daily tools (kept short): Python, SQL/MySQL, Bash, PowerShell, Git, Linux/Windows.
       </p>
     </section>
 
